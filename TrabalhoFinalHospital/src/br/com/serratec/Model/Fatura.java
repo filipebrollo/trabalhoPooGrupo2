@@ -6,7 +6,8 @@ import br.com.serratec.Enumerate.StatusFatura;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
-public class Fatura {
+public class Fatura implements ImpostoCalculado{
+
     private Integer idFatura;
     private BigDecimal valor;
     private StatusFatura status;
@@ -16,6 +17,19 @@ public class Fatura {
     private FormaPagamento formaPagamento;
     private PlanoSaude plano;
     private Cnpj cnpj;
+
+    public Fatura(Integer idFatura, BigDecimal valor, StatusFatura status, Paciente paciente, LocalDate dataEmissao,
+        LocalDate dataVencimento, FormaPagamento formaPagamento, PlanoSaude plano, Cnpj cnpj) {
+        this.idFatura = idFatura;
+        this.valor = valor;
+        this.status = status;
+        this.paciente = paciente;
+        this.dataEmissao = dataEmissao;
+        this.dataVencimento = dataVencimento;
+        this.formaPagamento = formaPagamento;
+        this.plano = plano;
+        this.cnpj = cnpj;
+    }
 
     public Fatura() {}
 
@@ -53,4 +67,35 @@ public class Fatura {
                 "\nData emissão: " + dataEmissao +
                 "\nData vencimento: " + dataVencimento;
     }
+
+    @Override
+    public BigDecimal valorISS() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'valorISS'");
+    }
+
+    @Override
+    public BigDecimal valorPIS() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'valorPIS'");
+    }
+
+    @Override
+    public BigDecimal valorCOFINS() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'valorCOFINS'");
+    }
+
+    @Override
+    public BigDecimal valorIRPJ() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'valorIRPJ'");
+    }
+
+    @Override
+    public BigDecimal valorCSLL() {
+        
+        throw new UnsupportedOperationException("Unimplemented method 'valorCSLL'");
+    }
+
 }
