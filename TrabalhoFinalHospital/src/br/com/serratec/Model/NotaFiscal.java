@@ -49,7 +49,7 @@ public class NotaFiscal extends Fatura {
     public BigDecimal valorISS() {
         return getValor().multiply(new BigDecimal(0.03)); 
     }
-
+    
     @Override
     public BigDecimal valorPIS() {
         return getValor().multiply(new BigDecimal(0.65)); 
