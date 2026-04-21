@@ -1,6 +1,7 @@
 package br.com.serratec.Model;
 
 public class Medico extends Pessoa {
+    
     private Integer crm;
     private String especialidade;
 
