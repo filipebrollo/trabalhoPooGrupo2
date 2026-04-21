@@ -19,7 +19,7 @@ public class Fatura {
 
     public Fatura() {}
 
-    public int getId() {
+    public Integer getId() {
         return idFatura;
     }
     public void setId(Integer idFatura) {
@@ -45,10 +45,12 @@ public class Fatura {
 
     @Override
     public String toString() {
-        return "Prestador de serviço\n" + cnpj.toString() +
-                "\nTomador\nPaciente: " + paciente.getNome() +
-                "Descrição do Serviço\nPrestação de serviços médicos hospitalares" +
-                "Valores da Nota\nValor bruto do serviço: " + valor + "\nAlíquota: 3%\nValor: ";
-
+        return "Fatura ID: " + idFatura +
+                "\nPaciente: " + (paciente != null ? paciente.getNome() : "N/A") +
+                "\nValor: " + valor +
+                "\nStatus: " + status +
+                "\nForma de pagamento: " + formaPagamento +
+                "\nData emissão: " + dataEmissao +
+                "\nData vencimento: " + dataVencimento;
     }
 }
