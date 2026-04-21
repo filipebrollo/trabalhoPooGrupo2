@@ -3,10 +3,10 @@ package br.com.serratec.Model;
 public class Paciente extends Pessoa{
     private Integer idPaciente;
 
-    public Integer getId() {
+    public Integer getIdPaciente() {
         return idPaciente;
     }
-    public void setId(Integer idPaciente) {
+    public void setIdPaciente(Integer idPaciente) {
         this.idPaciente = idPaciente;
     }
 

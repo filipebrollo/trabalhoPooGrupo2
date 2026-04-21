@@ -1,6 +1,8 @@
 package br.com.serratec.Model;
 
-public class Leitos {
+import br.com.serratec.Enumerate.StatusLeito;
+
+public class Leito {
     private Integer idLeito;
     private StatusLeito status;
     private Ala ala;
@@ -14,10 +16,13 @@ public class Leitos {
     public StatusLeito getStatus() {
         return status;
     }
-    public void setStatus(String Status) {
+    public void setStatus(StatusLeito Status) {
         this.status = status;
     }
+    public Ala getAla() { return  ala; }
+    public void setAla(Ala ala) { this.ala = ala; }
+    @Override
     public String toString() {
-        return "Id: " + idLeito + " | Status: " + status;
+        return "Id: " + idLeito + " | Status: " + status + " | Ala: " + ala;
     }
 }

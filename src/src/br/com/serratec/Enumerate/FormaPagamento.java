@@ -1,4 +1,4 @@
-package br.com.serratec.Model;
+package br.com.serratec.Enumerate;
 
 public enum FormaPagamento {
     CREDITO,

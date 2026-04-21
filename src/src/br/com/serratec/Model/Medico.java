@@ -2,7 +2,7 @@ package br.com.serratec.Model;
 
 public class Medico extends Pessoa {
     private Integer crm;
-    private String espcialidade;
+    private String especialidade;
 
     public Integer getCrm() {
         return crm;
@@ -10,15 +10,15 @@ public class Medico extends Pessoa {
     public void setCrm(Integer crm) {
         this.crm = crm;
     }
-    public String getEspcialidade() {
-        return espcialidade;
+    public String getEspecialidade() {
+        return especialidade;
     }
-    public void setEspcialidade(String espcialidade) {
-        this.espcialidade = espcialidade;
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
     }
 
     @Override
     public String getDescricao() {
-        return "Médico: " + nome + " | CRM: " +crm;
+        return "Médico: " + nome + " | CRM: " +crm + " | Especialidade: " + especialidade;
     }
 }

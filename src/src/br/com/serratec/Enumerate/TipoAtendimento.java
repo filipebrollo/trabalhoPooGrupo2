@@ -1,6 +1,4 @@
-package br.com.serratec.Model;
-
-import java.security.UnresolvedPermission;
+package br.com.serratec.Enumerate;
 
 public enum TipoAtendimento {
     CONSULTA,

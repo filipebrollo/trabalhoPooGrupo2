@@ -3,7 +3,7 @@ package br.com.serratec.Model;
 public class Ala {
     private Integer idAla;
     private String tipo;
-    private Integer idEnf;
+    private Enfermeira enfChefe;
     private Integer nLeitos;
 
     public Integer getIdAla() {
@@ -18,11 +18,11 @@ public class Ala {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    public Integer getIdEnf() {
-        return idEnf;
+    public Enfermeira getEnfChefe() {
+        return enfChefe;
     }
-    public void setIdEnf(Integer idEnf) {
-        this.idEnf = idEnf;
+    public void setEnfChefe(Enfermeira enfChefe) {
+        this.enfChefe = enfChefe;
     }
     public Integer getNLeitos() {
         return nLeitos;
@@ -33,6 +33,6 @@ public class Ala {
 
     public String toString() {
         return "id: " + idAla + " | tipo: " + tipo +
-               " | idEnf: " + idEnf + " | nLeitos: " + nLeitos;
+               " | idEnf: " + enfChefe.getNome() + " | nLeitos: " + nLeitos;
     }
 }

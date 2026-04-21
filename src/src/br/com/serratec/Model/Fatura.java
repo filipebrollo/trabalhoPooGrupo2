@@ -1,5 +1,8 @@
 package br.com.serratec.Model;
 
+import br.com.serratec.Enumerate.FormaPagamento;
+import br.com.serratec.Enumerate.StatusFatura;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -11,7 +14,7 @@ public class Fatura {
     private LocalDate dataEmissao;
     private LocalDate dataVencimento;
     private FormaPagamento formaPagamento;
-    private Plano plano;
+    private PlanoSaude plano;
     private Cnpj cnpj;
 
     public Fatura() {}
@@ -37,7 +40,7 @@ public class Fatura {
     public void setDataVencimento(LocalDate dataVencimento) { this.dataVencimento =  dataVencimento; }
     public FormaPagamento getFormaPagamento() { return formaPagamento; }
     public void setFormaPagamento(FormaPagamento formaPagamento) { this.formaPagamento =  formaPagamento; }
-    public Plano getPlano() { return plano; }
+    public PlanoSaude getPlano() { return plano; }
     public Cnpj getCnpj() { return cnpj; }
 
     @Override
