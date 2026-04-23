@@ -18,7 +18,7 @@ public class Fatura implements ImpostoCalculado{
     private PlanoSaude plano;
     private Cnpj cnpj;
 
-    public Fatura(Integer idFatura, BigDecimal valor, StatusFatura status, Paciente paciente, LocalDate dataEmissao,
+        public Fatura(Integer idFatura, BigDecimal valor, StatusFatura status, Paciente paciente, LocalDate dataEmissao,
         LocalDate dataVencimento, FormaPagamento formaPagamento, PlanoSaude plano, Cnpj cnpj) {
         this.idFatura = idFatura;
         this.valor = valor;
@@ -33,10 +33,10 @@ public class Fatura implements ImpostoCalculado{
 
     public Fatura() {}
 
-    public Integer getId() {
+    public Integer getIdFatura() {
         return idFatura;
     }
-    public void setId(Integer idFatura) {
+    public void setIdFatura(Integer idFatura) {
         this.idFatura = idFatura;
     }
     public BigDecimal getValor() { return valor; }
@@ -56,6 +56,8 @@ public class Fatura implements ImpostoCalculado{
     public void setFormaPagamento(FormaPagamento formaPagamento) { this.formaPagamento =  formaPagamento; }
     public PlanoSaude getPlano() { return plano; }
     public Cnpj getCnpj() { return cnpj; }
+    public void setCnpj(String cnpjEmissor){}
+    public void setPaciente(Paciente paciente){}
 
     @Override
     public String toString() {
