@@ -8,7 +8,7 @@ import java.time.LocalDate;
 
 public class Fatura {
 
-    private Integer idFatura;
+    private Integer idFatura; 
     private BigDecimal valor;
     private StatusFatura status;
     private Paciente paciente;
@@ -50,6 +50,8 @@ public class Fatura {
     public Paciente getPaciente() {
         return paciente;
     }
+
+
     
     public LocalDate getDataEmissao() { return dataEmissao; }
     public void setDataEmissao(LocalDate dataEmissao) {  this.dataEmissao = dataEmissao; }
@@ -60,7 +62,9 @@ public class Fatura {
     public PlanoSaude getPlano() { return plano; }
     public Cnpj getCnpj() { return cnpj; }
     public void setCnpj(String cnpjEmissor){}
-    public void setPaciente(Paciente paciente){}
+    public void setPaciente(Paciente paciente){
+        this.paciente = paciente;
+    }
 
     @Override
     public String toString() {

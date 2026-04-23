@@ -9,7 +9,6 @@ public class NotaFiscal implements ImpostoCalculado{
     private Fatura fatura;
     private Paciente paciente;
     private Cnpj cnpj;
-  
 
     public NotaFiscal(Integer idNota,Fatura fatura) {
         this.idNota = idNota;
