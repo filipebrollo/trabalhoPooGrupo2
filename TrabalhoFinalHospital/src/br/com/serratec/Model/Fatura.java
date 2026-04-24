@@ -61,15 +61,12 @@ public class Fatura {
     public void setFormaPagamento(FormaPagamento formaPagamento) { this.formaPagamento =  formaPagamento; }
     public PlanoSaude getPlano() { return plano; }
     public Cnpj getCnpj() { return cnpj; }
-<<<<<<< HEAD
-    public void setCnpj(String cnpjEmissor){}
-=======
+
     public void setCnpj(String cnpjEmissor){
         Cnpj c = new Cnpj();
         c.setCnpj(cnpjEmissor);
         this.cnpj = c;
     }
->>>>>>> 7108515f449ee332913be93487273ba5785812cd
     public void setPaciente(Paciente paciente){
         this.paciente = paciente;
     }
