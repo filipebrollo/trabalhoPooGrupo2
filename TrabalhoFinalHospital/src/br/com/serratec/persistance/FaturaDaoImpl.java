@@ -1,8 +1,6 @@
 package br.com.serratec.persistance;
 
 import java.sql.*;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import br.com.serratec.Enumerate.FormaPagamento;
 import br.com.serratec.Enumerate.StatusFatura;
@@ -36,17 +34,11 @@ public class FaturaDaoImpl implements FaturaDao {
                 f.setIdFatura(rs.getInt("id_fatura"));
                 f.setValor(rs.getBigDecimal("valor"));
                 f.setCnpj(rs.getString("cnpj_emissor"));
-<<<<<<< HEAD
-                f.setStatus(StatusFatura.valueOf(rs.getString("status").toUpperCase()));
-                f.setDataEmissao(rs.getDate("data_emissao").toLocalDate());
-                f.setDataVencimento(rs.getDate("data_vencimento").toLocalDate());
-                f.setFormaPagamento(FormaPagamento.valueOf(rs.getString("forma_pagamento").toUpperCase()));
-=======
                 f.setStatus(StatusFatura.valueOf(rs.getString("status")));
                 f.setDataEmissao(rs.getDate("data_emissao").toLocalDate());
                 f.setDataVencimento(rs.getDate("data_vencimento").toLocalDate());
                 f.setFormaPagamento(FormaPagamento.valueOf(rs.getString("forma_pagamento")));
->>>>>>> 7108515f449ee332913be93487273ba5785812cd
+
 
                 
                 Paciente p = new Paciente();

@@ -2,7 +2,6 @@ package br.com.serratec.Model;
 import br.com.serratec.Enumerate.ResultadoExame;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Exame {
