@@ -1,6 +1,10 @@
 package br.com.serratec.Model;
 
 import java.math.BigDecimal;
+<<<<<<< HEAD
+=======
+import java.math.RoundingMode;
+>>>>>>> 7108515f449ee332913be93487273ba5785812cd
 
 public class NotaFiscal implements ImpostoCalculado{
 
@@ -15,7 +19,12 @@ public class NotaFiscal implements ImpostoCalculado{
         this.fatura = fatura;
     }
 
+<<<<<<< HEAD
     public NotaFiscal(Fatura fatura){};
+=======
+
+    public NotaFiscal(Fatura fatura){this.fatura = fatura; this.paciente = fatura.getPaciente(); this.cnpj = fatura.getCnpj();};
+>>>>>>> 7108515f449ee332913be93487273ba5785812cd
 
     public Fatura getFatura(){return fatura;}
 
@@ -46,6 +55,7 @@ public class NotaFiscal implements ImpostoCalculado{
                 "\nDescrição de serviço \n" +  descricao +
                 "\nValores da Nota " +
                 "\nValor Bruto do Serviço: " + fatura.getValor() +
+<<<<<<< HEAD
                 "\nISS\nAlíquota: 3%\nValor: R$" + valorISS() +
                 "\nPIS\nAlíquota: 0,65%\nValor: R$" + valorPIS() +
                 "\nCOFINS\nAlíquota: 3%\nValor: R$" + valorCOFINS() +
@@ -58,6 +68,20 @@ public class NotaFiscal implements ImpostoCalculado{
                 "\nCOFINS         3,00%         R$" + valorCOFINS() + 
                 "\nIRPJ           1,20%         R$" + valorIRPJ() + 
                 "\nCSLL           1,08%         R$" + valorCSLL();
+=======
+                "\nISS\nAlíquota: 3%\nValor: R$" + valorISS().setScale(2,RoundingMode.HALF_UP) +
+                "\nPIS\nAlíquota: 0,65%\nValor: R$" + valorPIS().setScale(2,RoundingMode.HALF_UP) +
+                "\nCOFINS\nAlíquota: 3%\nValor: R$" + valorCOFINS().setScale(2,RoundingMode.HALF_UP) +
+                "\nIRPJ\nPercentual Efetivo: 1,2%\nValor: R$" + valorIRPJ().setScale(2,RoundingMode.HALF_UP) +
+                "\nCSLL\nPercentual Efetivo: 1,08%\nValor: R$" + valorCSLL().setScale(2,RoundingMode.HALF_UP) +
+
+                "\nResumo dos Impostos\nimpostos                     Valor " +
+                "\nISS            3,00%         R$" + valorISS().setScale(2,RoundingMode.HALF_UP) +
+                "\nPIS            0,65%         R$" + valorPIS().setScale(2,RoundingMode.HALF_UP)  +
+                "\nCOFINS         3,00%         R$" + valorCOFINS().setScale(2,RoundingMode.HALF_UP)  +
+                "\nIRPJ           1,20%         R$" + valorIRPJ().setScale(2,RoundingMode.HALF_UP)  +
+                "\nCSLL           1,08%         R$" + valorCSLL().setScale(2,RoundingMode.HALF_UP) ;
+>>>>>>> 7108515f449ee332913be93487273ba5785812cd
                 
                 
     }
@@ -82,5 +106,14 @@ public class NotaFiscal implements ImpostoCalculado{
         return fatura.getValor().multiply(new BigDecimal(0.08)); 
     }
 
+<<<<<<< HEAD
     
+=======
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+
+>>>>>>> 7108515f449ee332913be93487273ba5785812cd
 }
