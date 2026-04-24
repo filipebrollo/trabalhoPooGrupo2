@@ -15,11 +15,9 @@ public class Cnpj {
     public String toString() {
         return nomeFantasia + "\n" + cnpj + "\n";
     }
-<<<<<<< HEAD
-=======
 
     public String setCnpj(String cnpjEmissor) {
         return cnpj;
     }
->>>>>>> 7108515f449ee332913be93487273ba5785812cd
+
 }

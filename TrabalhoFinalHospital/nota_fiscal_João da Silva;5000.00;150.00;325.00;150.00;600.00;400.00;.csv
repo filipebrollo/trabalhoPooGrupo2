@@ -1,0 +1,3 @@
+sep=;
+Paciente;Valor;ISS;PIS;COFINS;IRPJ;CSLL
+João da Silva;5000.00;150.00;325.00;150.00;600.00;400.00
