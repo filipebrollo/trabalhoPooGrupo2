@@ -36,10 +36,8 @@ public class FaturaDaoImpl implements FaturaDao {
                 f.setIdFatura(rs.getInt("id_fatura"));
                 f.setValor(rs.getBigDecimal("valor"));
                 f.setCnpj(rs.getString("cnpj_emissor"));
-                f.setStatus(StatusFatura.valueOf(rs.getString("status")));
                 f.setDataEmissao(rs.getDate("data_emissao").toLocalDate());
                 f.setDataVencimento(rs.getDate("data_vencimento").toLocalDate());
-                f.setFormaPagamento(FormaPagamento.valueOf(rs.getString("forma_pagamento")));
 
                 
                 Paciente p = new Paciente();

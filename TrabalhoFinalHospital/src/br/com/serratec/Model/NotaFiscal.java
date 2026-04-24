@@ -40,19 +40,18 @@ public class NotaFiscal implements ImpostoCalculado{
  @Override
     public String toString() {
         return 
-                "Prestador de Serviço\n" +
+                "\nPrestador de Serviço\n" +
                 cnpj.getNomeFantasia() +
-                "\nCNPJ: " + cnpj.getCnpj() +
-                "Tomador\nPaciente: " + (paciente != null ? paciente.getNome() : "N/A") + 
-                "Fatura ID: " + fatura.getIdFatura() +
-                "\nDescrição de serviço \n" +  descricao +
+                "\nCNPJ: " + cnpj.getCnpj() + "\n" +
+                "\nTomador\nPaciente: " + (paciente != null ? paciente.getNome() : "N/A") + "\n" +
+                "\nDescrição de serviço \n" +  descricao + "\n" +
                 "\nValores da Nota " +
                 "\nValor Bruto do Serviço: " + fatura.getValor() +
-                "\nISS\nAlíquota: 3%\nValor: R$" + valorISS().setScale(2,RoundingMode.HALF_UP) +
-                "\nPIS\nAlíquota: 0,65%\nValor: R$" + valorPIS().setScale(2,RoundingMode.HALF_UP) +
-                "\nCOFINS\nAlíquota: 3%\nValor: R$" + valorCOFINS().setScale(2,RoundingMode.HALF_UP) +
-                "\nIRPJ\nPercentual Efetivo: 1,2%\nValor: R$" + valorIRPJ().setScale(2,RoundingMode.HALF_UP) +
-                "\nCSLL\nPercentual Efetivo: 1,08%\nValor: R$" + valorCSLL().setScale(2,RoundingMode.HALF_UP) +
+                "\nISS\nAlíquota: 3%\nValor: R$" + valorISS().setScale(2,RoundingMode.HALF_UP) + "\n" +
+                "\nPIS\nAlíquota: 0,65%\nValor: R$" + valorPIS().setScale(2,RoundingMode.HALF_UP) + "\n" +
+                "\nCOFINS\nAlíquota: 3%\nValor: R$" + valorCOFINS().setScale(2,RoundingMode.HALF_UP) + "\n" +
+                "\nIRPJ\nPercentual Efetivo: 1,2%\nValor: R$" + valorIRPJ().setScale(2,RoundingMode.HALF_UP) + "\n" +
+                "\nCSLL\nPercentual Efetivo: 1,08%\nValor: R$" + valorCSLL().setScale(2,RoundingMode.HALF_UP) + "\n" +
 
                 "\nResumo dos Impostos\nimpostos                     Valor " +
                 "\nISS            3,00%         R$" + valorISS().setScale(2,RoundingMode.HALF_UP) +
@@ -69,7 +68,7 @@ public class NotaFiscal implements ImpostoCalculado{
     }
     
     public BigDecimal valorPIS() {
-        return fatura.getValor().multiply(new BigDecimal(0.065)); 
+        return fatura.getValor().multiply(new BigDecimal(0.0065));
     }
     
     public BigDecimal valorCOFINS() {
@@ -77,11 +76,11 @@ public class NotaFiscal implements ImpostoCalculado{
     }
 
     public BigDecimal valorIRPJ() {
-        return fatura.getValor().multiply(new BigDecimal(0.12)); 
+        return fatura.getValor().multiply(new BigDecimal(0.012));
     }
 
     public BigDecimal valorCSLL() {
-        return fatura.getValor().multiply(new BigDecimal(0.08)); 
+        return fatura.getValor().multiply(new BigDecimal(0.0108));
     }
 
 

@@ -21,15 +21,13 @@ public class gerarCSV {
 
             writer.append("sep=;\n");
 
-            writer.append("Paciente;Valor;ISS;PIS;COFINS;IRPJ;CSLL\n");
-
-            writer.append(nota.getPaciente().getNome() + ";");
-            writer.append(nota.getValor().setScale(2, java.math.RoundingMode.HALF_UP) + ";");
-            writer.append(nota.valorISS().setScale(2, java.math.RoundingMode.HALF_UP) + ";");
-            writer.append(nota.valorPIS().setScale(2, java.math.RoundingMode.HALF_UP) + ";");
-            writer.append(nota.valorCOFINS().setScale(2, java.math.RoundingMode.HALF_UP) + ";");
-            writer.append(nota.valorIRPJ().setScale(2, java.math.RoundingMode.HALF_UP) + ";");
-            writer.append(nota.valorCSLL().setScale(2, java.math.RoundingMode.HALF_UP) + "\n");
+            writer.append("Nome do paciente;" + nota.getPaciente().getNome() + "\n");
+            writer.append("Valor da nota;" + nota.getValor().setScale(2, RoundingMode.HALF_UP) + "\n");
+            writer.append("ISS;" + nota.valorISS().setScale(2, RoundingMode.HALF_UP) + "\n");
+            writer.append("PIS;" + nota.valorPIS().setScale(2, RoundingMode.HALF_UP) + "\n");
+            writer.append("COFINS;" + nota.valorCOFINS().setScale(2, RoundingMode.HALF_UP) + "\n");
+            writer.append("IRPJ;" + nota.valorIRPJ().setScale(2, RoundingMode.HALF_UP) + "\n");
+            writer.append("CSLL;" + nota.valorCSLL().setScale(2, RoundingMode.HALF_UP) + "\n");
 
         } catch (IOException e) {
             e.printStackTrace();

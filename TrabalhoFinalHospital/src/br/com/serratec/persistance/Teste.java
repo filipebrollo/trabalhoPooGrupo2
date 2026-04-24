@@ -19,7 +19,6 @@ public class Teste {
 
         Fatura fatura = faturaDao.buscarPorId(id);
 
-        System.out.println(fatura);
 
         if (fatura != null) {
             NotaFiscal nota = new NotaFiscal(fatura);
@@ -29,9 +28,10 @@ public class Teste {
 
             NotaFiscalDao notaFiscalDao = new NotaFiscalDao();
 
+            notaFiscalDao.salvar(nota);
+
             gerarCSV.imprimirCSV(nota);
-
-
+            
             System.out.println("Nota Fiscal Gerada com Sucesso!!! ");
             
         }

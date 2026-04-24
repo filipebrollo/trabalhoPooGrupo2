@@ -18,7 +18,7 @@ public class NotaFiscalDao implements NotaFiscalDaoImpl {
     public void salvar(NotaFiscal notaFiscal){
         String sql = """
                 insert into nota_fiscal (id_fatura,nome_emissor,nome_paciente,descricao, 
-                iss, pis, cofins, irpj, csll) 
+                pis, cofins, iss, irpj, csll) 
                 values(?, ?, ?, ?, ?, ?, ?, ?,?)
                 """;
                 try {
